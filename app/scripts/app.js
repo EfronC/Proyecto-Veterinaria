@@ -31,6 +31,18 @@ angular
         templateUrl: 'views/registrarcliente.html',
         controller: 'registrarcliente.js'
       })
+      .when('/vercliente',{
+        templateUrl: 'views/vercliente.html',
+        controller: 'vercliente.js'
+      })
+      .when('/nconsulta',{
+        templateUrl: 'views/nuevaconsulta.html',
+        controller: 'nuevaconsulta.js'
+      })
+      .when('/nmascota',{
+        templateUrl: 'views/nuevamascota.html',
+        controller: 'nuevamascota.js'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,55 @@
+<div class="page-header">
+	<h1>Nueva consulta</h1>
+</div>
+<div class="container">
+	<div class="row">
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<label for="tipo" class="col-sm-2 control-label">Tipo</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="tipo">
+							<option>Servicio</option>
+							<option>Revisión</option>
+							<option>Cirugía</option>
+							<option>Vacuna</option>
+						</select>
+					</div>
+					
+				</div>
+				<div class="form-group">
+					<label for="hora" class="col-sm-2 control-label">Hora</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="hora">
+							<option>Actual</option>
+							<option>Otra</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button class="btn btn-default" type="button" data-toggle="modal" data-target=".data-check">Ver</button>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<br>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="button" class="btn btn-success">Aceptar</button>
+						<button type="button" class="btn btn-danger">Cancelar</button>
+					</div>
+				</div>
+			</form>
+	</div>
+	<div class="modal fade data-check" tabindex="-1" role="dialog" aria-labelledby="clientemodal" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">Tipo</h3>
+				</div>
+				<div class="modal-body">
+					<p>Some information</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

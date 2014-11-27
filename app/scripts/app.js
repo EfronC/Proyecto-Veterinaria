@@ -43,6 +43,38 @@ angular
         templateUrl: 'views/nuevamascota.html',
         controller: 'nuevamascota.js'
       })
+      .when('/icomida',{
+        templateUrl: 'views/icomida.html',
+        controller: 'icomida.js'
+      })
+      .when('/iproductos',{
+        templateUrl: 'views/iproductos.html',
+        controller: 'iproductos.js'
+      })
+      .when('/mvacunas',{
+        templateUrl: 'views/mvacunas.html',
+        controller: 'mvacunas.js'
+      })
+      .when('/mantibioticos',{
+        templateUrl: 'views/mantibioticos.html',
+        controller: 'mantibioticos.js'
+      })
+      .when('/manalgesicos',{
+        templateUrl: 'views/manalgesicos.html',
+        controller: 'manalgesicos.js'
+      })
+      .when('/vcomida',{
+        templateUrl: 'views/vcomida.html',
+        controller: 'vcomida.js'
+      })
+      .when('/vproductos',{
+        templateUrl: 'views/vproductos.html',
+        controller: 'vproductos.js'
+      })
+      .when('/vmedicina',{
+        templateUrl: 'views/vmedicina.html',
+        controller: 'vmedicina.js'
+      })
       .otherwise({
         redirectTo: '/'
       });

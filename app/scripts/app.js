@@ -29,51 +29,51 @@ angular
       })
       .when('/registrar',{
         templateUrl: 'views/registrarcliente.html',
-        controller: 'registrarcliente.js'
+        controller: 'RegistrarClienteCtrl'
       })
       .when('/vercliente',{
         templateUrl: 'views/vercliente.html',
-        controller: 'vercliente.js'
+        controller: 'VerClienteCtrl'
       })
       .when('/nconsulta',{
         templateUrl: 'views/nuevaconsulta.html',
-        controller: 'nuevaconsulta.js'
+        controller: 'NuevaConsultaCtrl'
       })
       .when('/nmascota',{
         templateUrl: 'views/nuevamascota.html',
-        controller: 'nuevamascota.js'
+        controller: 'NuevaMascotaCtrl'
       })
       .when('/icomida',{
         templateUrl: 'views/icomida.html',
-        controller: 'icomida.js'
+        controller: 'IComidaCtrl'
       })
       .when('/iproductos',{
         templateUrl: 'views/iproductos.html',
-        controller: 'iproductos.js'
+        controller: 'IProductosCtrl'
       })
       .when('/mvacunas',{
         templateUrl: 'views/mvacunas.html',
-        controller: 'mvacunas.js'
+        controller: 'MVacunasCtrl'
       })
       .when('/mantibioticos',{
         templateUrl: 'views/mantibioticos.html',
-        controller: 'mantibioticos.js'
+        controller: 'MAntibioticosCtrl'
       })
       .when('/manalgesicos',{
         templateUrl: 'views/manalgesicos.html',
-        controller: 'manalgesicos.js'
+        controller: 'MAnalgesicosCtrl'
       })
       .when('/vcomida',{
         templateUrl: 'views/vcomida.html',
-        controller: 'vcomida.js'
+        controller: 'VComidaCtrl'
       })
       .when('/vproductos',{
         templateUrl: 'views/vproductos.html',
-        controller: 'vproductos.js'
+        controller: 'VProductosCtrl'
       })
       .when('/vmedicina',{
         templateUrl: 'views/vmedicina.html',
-        controller: 'vmedicina.js'
+        controller: 'VMedicinaCtrl'
       })
       .otherwise({
         redirectTo: '/'

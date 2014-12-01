@@ -3,9 +3,11 @@
 angular.module('proyectoVeterinariaApp').controller('RegistrarClienteCtrl', function ($scope) {
 	$scope.number = 2;
 
-	$scope.ver = [
-		{number1:'hola'},
-		{number2:'mundo'},
-		{number3:'iwenmowenf'}
+	$scope.vac = [
+		{Vaccine:'Vacuna1'},
 	];
+
+	$scope.addVaccine = function () {
+		$scope.vac.push({Vaccine:''});
+	};
 });

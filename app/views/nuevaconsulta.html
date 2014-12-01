@@ -1,17 +1,13 @@
 <div class="page-header">
 	<h1>Nueva consulta</h1>
 </div>
-<div class="container">
+<div class="container" ng-controller="NuevaConsultaCtrl">
 	<div class="row">
 			<form class="form-horizontal" role="form">
 				<div class="form-group">
 					<label for="tipo" class="col-sm-2 control-label">Tipo</label>
 					<div class="col-sm-10">
-						<select class="form-control" id="tipo">
-							<option>Servicio</option>
-							<option>Revisión</option>
-							<option>Cirugía</option>
-							<option>Vacuna</option>
+						<select class="form-control" id="tipo" ng-model="opt" ng-options="op.option for op in opts">
 						</select>
 					</div>
 					
@@ -19,15 +15,70 @@
 				<div class="form-group">
 					<label for="hora" class="col-sm-2 control-label">Hora</label>
 					<div class="col-sm-10">
-						<select class="form-control" id="hora">
-							<option>Actual</option>
-							<option>Otra</option>
-						</select>
+						<input type="time" ng-model="date" placeholder="HH:mm:ss">
 					</div>
 				</div>
-				<div class="form-group">
+				<!--<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<button class="btn btn-default" type="button" data-toggle="modal" data-target=".data-check">Ver</button>
+					</div>
+				</div>-->
+				<div ng-switch="opt.option">
+					<div ng-switch-when="Servicio">
+						<div class="form-group">
+							<label for="servicio" class="col-sm-2 control-label">Servicio</label>
+							<div class="col-sm-10">
+								<select class="form-control" id="servicio" ng-model="serv" ng-options="ser.servicio for ser in servs"></select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="precio" class="col-sm-2 control-label">Precio</label>
+							<div class="col-sm-10">
+								<input id="precio" ng-model="serv.precio" ng-disabled="true">
+							</div>
+						</div>
+					</div>
+					<div ng-switch-when="Revision">
+						<div class="form-group">
+							<label for="revision" class="col-sm-2 control-label">Revisión</label>
+							<div class="col-sm-10">
+								<select class="form-control" id="revision" ng-model="revi" ng-options="re.revision for re in revis"></select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="precio" class="col-sm-2 control-label">Precio</label>
+							<div class="col-sm-10">
+								<input id="precio" ng-model="revi.precio" ng-disabled="true">
+							</div>
+						</div>
+					</div>
+					<div ng-switch-when="Vacuna">
+						<div class="form-group">
+							<label for="vacuna" class="col-sm-2 control-label">Vacuna</label>
+							<div class="col-sm-10">
+								<select class="form-control" id="vacuna" ng-model="vac" ng-options="va.vacuna for va in vacs"></select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="precio" class="col-sm-2 control-label">Precio</label>
+							<div class="col-sm-10">
+								<input id="precio" ng-model="vac.precio" ng-disabled="true">
+							</div>
+						</div>
+					</div>
+					<div ng-switch-when="Cirugia">
+						<div class="form-group">
+							<label for="cirugia" class="col-sm-2 control-label">Cirugía</label>
+							<div class="col-sm-10">
+								<select class="form-control" id="cirugia" ng-model="cir" ng-options="ci.cirugia for ci in cirs"></select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="precio" class="col-sm-2 control-label">Precio</label>
+							<div class="col-sm-10">
+								<input id="precio" ng-model="cir.precio" ng-disabled="true">
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -40,16 +91,36 @@
 				</div>
 			</form>
 	</div>
-	<div class="modal fade data-check" tabindex="-1" role="dialog" aria-labelledby="clientemodal" aria-hidden="true">
+	<!--<div class="modal fade data-check" tabindex="-1" role="dialog" aria-labelledby="clientemodal" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h3 class="modal-title">Tipo</h3>
+					<h3 class="modal-title">{{opt.option}}</h3>
 				</div>
 				<div class="modal-body">
-					<p>Some information</p>
+					<h4>Hora</h4>
+					{{date}}
+					<div ng-switch="opt.option">
+						<div ng-switch-when="Servicio">
+							<div class="form-group">
+								<label for="servicio" class="col-sm-2 control-label">Servicio</label>
+								<div class="col-sm-10">
+									<select class="form-control" id="servicio" ng-model="serv" ng-options="ser.servicio for ser in servs"></select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="precio" class="col-sm-2 control-label">Precio</label>
+								<div class="col-sm-10">
+									<input id="precio" ng-model="serv.precio" ng-disabled="true">
+								</div>
+							</div>
+						</div>
+						<div ng-switch-when="Revision"></div>
+						<div ng-switch-when="Vacuna"></div>
+						<div ng-switch-when="Cirugia"></div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 </div>

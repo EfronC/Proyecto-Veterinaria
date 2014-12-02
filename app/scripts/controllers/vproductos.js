@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('proyectoVeterinariaApp')
-	.controller('IProductosCtrl',function ($scope){
+	.controller('VProductosCtrl',function ($scope){
 		$scope.productos = [
 			{producto:'Pelota', precio:50, cantidad:12},
 			{producto:'Hueso de juguete', precio:60, cantidad:10},
@@ -9,5 +9,7 @@ angular.module('proyectoVeterinariaApp')
 			{producto:'Jaula',precio:40, cantidad:5}
 		];
 
-		$scope.search='';
+		$scope.produ = $scope.productos[0];
+		$scope.cantidad=1;
+		$scope.precio=$scope.produ.precio*$scope.cantidad;
 	});

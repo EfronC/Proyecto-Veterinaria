@@ -2,5 +2,13 @@
 
 angular.module('proyectoVeterinariaApp')
 	.controller('IComidaCtrl',function ($scope){
-		$scope.num = 1;
+		$scope.comidas = [
+			{comida:'Pedigree Adulto 5kg', precio:50, cantidad:12},
+			{comida:'Purina Adulto 5kg', precio:60, cantidad:10},
+			{comida:'Pedigree Bebe 2kg',precio:30, cantidad:15},
+			{comida:'Purina Bebe 2kg',precio:40, cantidad:5}
+		];
+
+		$scope.search='';
+
 	});

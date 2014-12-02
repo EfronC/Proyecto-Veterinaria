@@ -7,12 +7,12 @@
 <div class="container">
 	<form class="form-inline" role="form">
 		<div class="form-group">
-			<input class="form-control" placeholder="Buscar...">
+			<input type="search" ng-model="search" class="form-control" placeholder="Buscar...">
 		</div>
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<div class="form-group">
 			<label for="ordenar" class="control-label">Ordenar por:</label>
-			<select class="form-control" id="ordenar">
+			<select class="form-control" id="ordenar" ng-disabled="true">
 				<option>Nombre</option>
 				<option>Cantidad(mas)</option>
 				<option>Cantidad(menos)</option>
@@ -31,13 +31,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Somenthing</td>
-						<td>Quantity</td>
-					</tr>
-					<tr>
-						<td>Another</td>
-						<td>Quantity</td>
+					<tr ng-repeat="comida in comidas | filter:search">
+						<td>{{comida.comida}}</td>
+						<td>{{comida.cantidad}}<span class="caret" ng-if="comida.cantidad<=5"></span></td>
 					</tr>
 				</tbody>
 			</table>

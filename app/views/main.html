@@ -1,0 +1,26 @@
+<div class="page-header">
+	<h1>Veterinaria: Patitas</h1>
+</div>
+<div class="container" ng-controller='MainCtrl'>
+	<div id="carousel-patitas" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-patitas" data-slide-to="0"></li>
+			<li data-target="#carousel-patitas" data-slide-to="1"></li>
+			<li data-target="#carousel-patitas" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item" ng-class="{active:$first}" ng-repeat="ani in animales">
+				<center><h3>{{ani.especie}}</h3></center>
+				{{ani.observacion}}
+			</div>
+		</div>
+		<a class="left carousel-control" href="#carousel-patitas" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-patitas" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+</div>

@@ -11,5 +11,30 @@ angular.module('proyectoVeterinariaApp')
 
 		$scope.produ = $scope.productos[0];
 		$scope.cantidad=1;
-		$scope.precio=$scope.produ.precio*$scope.cantidad;
+		//$scope.precio=$scope.produ.precio*$scope.cantidad;
+
+		$scope.verCantidad = function(){
+			if($scope.produ.cantidad-$scope.cantidad < 0){
+				return false;
+			}else{
+				return true;
+			}
+		};
+
+		$scope.genDeuda = function(){
+			$scope.precio = $scope.produ.precio*$scope.cantidad;
+			if($scope.precio < 0){
+				return 'error';	
+			} else {
+				return $scope.precio;
+			}
+		};
+
+		$scope.verDeuda = function (){
+			if($scope.precio<=0){
+				return false;
+			} else {
+				return true;
+			}
+		};
 	});

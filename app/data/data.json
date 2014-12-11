@@ -1,4 +1,4 @@
-Comida = [
+[
 	{comida:'Pedigree Adulto 5kg', precio:50, cantidad:12},
 	{comida:'Purina Adulto 5kg', precio:60, cantidad:10},
 	{comida:'Pedigree Bebe 2kg',precio:30, cantidad:15},

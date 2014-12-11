@@ -12,10 +12,7 @@
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<div class="form-group">
 			<label for="ordenar" class="control-label">Ordenar por:</label>
-			<select class="form-control" id="ordenar" ng-disabled="true">
-				<option>Nombre</option>
-				<option>Cantidad(mas)</option>
-				<option>Cantidad(menos)</option>
+			<select class="form-control" id="ordenar" ng-model="ord" ng-options="sor.nombre for sor in sort">
 			</select>
 		</div>
 	</form>
@@ -31,7 +28,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="comida in comidas | filter:search">
+					<tr ng-repeat="comida in comidas | filter:search | orderBy:ord.tipo " >
 						<td>{{comida.comida}}</td>
 						<td>{{comida.cantidad}}<span class="caret" ng-if="comida.cantidad<=5"></span></td>
 					</tr>

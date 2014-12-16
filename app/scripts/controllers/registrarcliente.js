@@ -10,4 +10,8 @@ angular.module('proyectoVeterinariaApp').controller('RegistrarClienteCtrl', func
 	$scope.addVaccine = function () {
 		$scope.vac.push({Vaccine:''});
 	};
+
+	$scope.remVaccine = function () {
+		$scope.vac.pop();
+	};
 });

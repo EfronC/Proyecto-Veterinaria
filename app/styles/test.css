@@ -1,0 +1,9 @@
+body {
+	color: gray;
+}
+
+.page-header {
+	color:white;
+	text-align: center;
+	background: -webkit-radial-gradient(center, ellipse cover, rgb(153,0,0) 0%,rgb(0,0,0) 54%);
+}
